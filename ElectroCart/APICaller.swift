@@ -28,6 +28,27 @@ class APICaller{
         }.resume()
     }
     
+    func configureImage(fromUrl: String, completion: @escaping (Result<Data,Error>) -> Void){
+        guard let url = URL(string: fromUrl) else {return}
+        
+//        if let imageCache = imageCache.object(forKey: fromUrl as NSString) {
+//            self.productImageView.image = imageCache
+//               return
+//        }
+        
+        URLSession.shared.dataTask(with: URLRequest(url: url)) {  data,_,error in
+            guard error == nil else {
+                completion(.failure(APIError.invalidURLError))
+                return
+            }
+            
+            if let imageData = data {
+                completion(.success(imageData))
+            }
+            
+        }.resume()
+    }
+    
     enum APIError: Error {
         case failedToGetData
         case invalidURLError

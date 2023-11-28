@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E55965E2B071DB100A55B0A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55965D2B071DB100A55B0A /* TableViewCell.swift */; };
+		5EAEBC8D2B1362090019B3F6 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAEBC8C2B1362090019B3F6 /* ProductViewController.swift */; };
+		5EAEBC8F2B13699E0019B3F6 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAEBC8E2B13699E0019B3F6 /* ProductCollectionViewCell.swift */; };
 		5ED49A252B0631FC0072604C /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED49A242B0631FC0072604C /* APICaller.swift */; };
 		5ED49A272B0634330072604C /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED49A262B0634330072604C /* ProductModel.swift */; };
 		5EEA49F72AF2B06800E20CE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA49F62AF2B06800E20CE6 /* AppDelegate.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		5E55965D2B071DB100A55B0A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		5EAEBC8C2B1362090019B3F6 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		5EAEBC8E2B13699E0019B3F6 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		5ED49A242B0631FC0072604C /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		5ED49A262B0634330072604C /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		5EEA49F32AF2B06800E20CE6 /* ElectroCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectroCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +89,8 @@
 			children = (
 				5E55965D2B071DB100A55B0A /* TableViewCell.swift */,
 				5EEA49FA2AF2B06800E20CE6 /* ViewController.swift */,
+				5EAEBC8C2B1362090019B3F6 /* ProductViewController.swift */,
+				5EAEBC8E2B13699E0019B3F6 /* ProductCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +178,8 @@
 				5EEA49F92AF2B06800E20CE6 /* SceneDelegate.swift in Sources */,
 				5E55965E2B071DB100A55B0A /* TableViewCell.swift in Sources */,
 				5ED49A252B0631FC0072604C /* APICaller.swift in Sources */,
+				5EAEBC8D2B1362090019B3F6 /* ProductViewController.swift in Sources */,
+				5EAEBC8F2B13699E0019B3F6 /* ProductCollectionViewCell.swift in Sources */,
 				5ED49A272B0634330072604C /* ProductModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

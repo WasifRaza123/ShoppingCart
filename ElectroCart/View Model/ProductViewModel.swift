@@ -15,7 +15,6 @@ class ProductViewModel {
         }
     }
     
-    
     func fetchProducts() {
         APICaller.shared.fetchData{ result in
             switch result {

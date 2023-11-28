@@ -9,21 +9,24 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    private var shadowLayer: CAShapeLayer!
     
     let searchBar = UISearchBar()
     var filteredItems = [Product]()
     private let viewModel = ProductViewModel()
+    
     let tableView: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
-        
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.separatorStyle = .none
         view.addSubview(searchBar)
         view.addSubview(tableView)
+        
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
@@ -43,7 +46,6 @@ class ViewController: UIViewController {
     func applyConstraints(){
         tableView.translatesAutoresizingMaskIntoConstraints = false
         searchBar.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             
             searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -52,12 +54,8 @@ class ViewController: UIViewController {
             tableView.widthAnchor.constraint(equalTo: view.widthAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        
-        
     }
-    
 }
-
 
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -68,26 +66,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell ?? TableViewCell(style: .default, reuseIdentifier: "cell")
         cell.titleLabel.text = self.filteredItems[indexPath.row].title
-        cell.ratingLabel.text = "\(self.filteredItems[indexPath.row].rating)"
+        cell.ratingLabel.text = "Rating\(self.filteredItems[indexPath.row].rating)"
+        cell.priceLabel.text = "Rs.\(self.filteredItems[indexPath.row].price)"
         cell.configureImage(fromUrl: self.filteredItems[indexPath.row].thumbnail)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        let vc = ProductViewController(product: self.filteredItems[indexPath.row])
+        present(vc, animated: true)
     }
-
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
-    {
-        let verticalPadding: CGFloat = 8
-        let mask = CAShapeLayer()
-        mask.cornerRadius = 10
-        mask.backgroundColor = UIColor.black.cgColor
-        
-        mask.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: verticalPadding/2, dy: verticalPadding/2)
-        cell.layer.mask = mask
-    }
+    
 }
 
 extension ViewController: UISearchBarDelegate {
