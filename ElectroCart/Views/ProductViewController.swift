@@ -10,6 +10,10 @@ import UIKit
 
 class ProductViewController: UIViewController {
     private let product: Product
+    let addView = UIView()
+    private let buyButton = UIButton()
+    private let addToCartButton = UIButton()
+    
     private var currentPage = 0 {
         didSet {
             pageControl.currentPage = currentPage
@@ -54,7 +58,7 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+        title = self.product.title
         imageCarousel.dataSource = self
         imageCarousel.delegate = self
         
@@ -65,14 +69,51 @@ class ProductViewController: UIViewController {
         view.addSubview(pageControl)
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         
+        view.addSubview(addView)
+        addView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(addToCartButton)
+        addToCartButton.setTitle("Add to Cart", for: .normal)
+        addToCartButton.setTitleColor(.black, for: .normal)
+        addToCartButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        addToCartButton.layer.borderWidth = 1
+        addToCartButton.layer.cornerRadius = 5
+        addToCartButton.layer.borderColor = UIColor.black.cgColor
+        addToCartButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(buyButton)
+        buyButton.setTitle("Buy", for: .normal)
+        buyButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        buyButton.layer.borderWidth = 1
+        buyButton.layer.cornerRadius = 5
+        buyButton.layer.borderColor = UIColor.black.cgColor
+        buyButton.backgroundColor = .yellow
+        buyButton.setTitleColor(.black, for: .normal)
+        buyButton.translatesAutoresizingMaskIntoConstraints = false
+        
         
         NSLayoutConstraint.activate([
+            addView.heightAnchor.constraint(equalToConstant: 3),
+            addView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            addView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            
+            imageCarousel.topAnchor.constraint(equalTo: addView.bottomAnchor),
             imageCarousel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             imageCarousel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imageCarousel.topAnchor.constraint(equalTo: view.topAnchor),
             imageCarousel.heightAnchor.constraint(equalToConstant: 300),
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            pageControl.topAnchor.constraint(equalTo: imageCarousel.bottomAnchor)
+            pageControl.topAnchor.constraint(equalTo: imageCarousel.bottomAnchor),
+            
+            addToCartButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            addToCartButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            addToCartButton.widthAnchor.constraint(equalToConstant: 120),
+            
+            buyButton.widthAnchor.constraint(equalToConstant: 120),
+            buyButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            buyButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
+            
+            
+            
         ])
     }
     
@@ -98,7 +139,7 @@ extension ProductViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as? ProductCollectionViewCell ?? ProductCollectionViewCell(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ProductCollectionViewCell
         cell.configureImage(fromUrl: self.product.images[indexPath.row])
         return cell
     }

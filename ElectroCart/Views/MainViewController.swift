@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     private var shadowLayer: CAShapeLayer!
     
     let searchBar = UISearchBar()
@@ -23,6 +23,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Electro Cart"
+        
+        
+        navigationItem.backButtonTitle = "Back"
         tableView.separatorStyle = .none
         view.addSubview(searchBar)
         view.addSubview(tableView)
@@ -47,8 +53,7 @@ class ViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            
-            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            searchBar.topAnchor.constraint(equalTo: navigationItem.titleView?.bottomAnchor ?? view.safeAreaLayoutGuide.topAnchor),
             searchBar.widthAnchor.constraint(equalTo: view.widthAnchor),
             tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
             tableView.widthAnchor.constraint(equalTo: view.widthAnchor),
@@ -57,8 +62,7 @@ class ViewController: UIViewController {
     }
 }
 
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         filteredItems.count
     }
@@ -66,21 +70,32 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell ?? TableViewCell(style: .default, reuseIdentifier: "cell")
         cell.titleLabel.text = self.filteredItems[indexPath.row].title
-        cell.ratingLabel.text = "Rating\(self.filteredItems[indexPath.row].rating)"
-        cell.priceLabel.text = "Rs.\(self.filteredItems[indexPath.row].price)"
+        cell.priceLabel.text = "Rs. \(self.filteredItems[indexPath.row].price)"
         cell.configureImage(fromUrl: self.filteredItems[indexPath.row].thumbnail)
-        
+        cell.starView.setUpStarStackView(rating: self.filteredItems[indexPath.row].rating )
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ProductViewController(product: self.filteredItems[indexPath.row])
-        present(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == tableView{
+            if tableView.contentOffset.y > 3.0{
+                self.navigationController?.navigationBar.prefersLargeTitles = false
+            }
+            else {
+                self.navigationController?.navigationBar.prefersLargeTitles = true
+                self.navigationItem.largeTitleDisplayMode = .automatic
+                self.navigationController?.navigationBar.sizeToFit()
+            }
+        }
+    }
 }
 
-extension ViewController: UISearchBarDelegate {
+extension MainViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard !searchText.replacingOccurrences(of: " ", with: "").isEmpty else {
             self.filteredItems = viewModel.products

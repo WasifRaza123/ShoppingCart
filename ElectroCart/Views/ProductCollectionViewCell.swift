@@ -13,14 +13,10 @@ class ProductCollectionViewCell: UICollectionViewCell {
         return view
     }()
     
-   
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),

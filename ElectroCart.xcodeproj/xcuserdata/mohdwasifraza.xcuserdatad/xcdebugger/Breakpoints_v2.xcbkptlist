@@ -53,73 +53,10 @@
             filePath = "ElectroCart/Views/ProductViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "ProductViewController"
             landmarkType = "21">
-            <Locations>
-               <Location
-                  uuid = "3007557B-1E04-4B96-8335-59FC55A50A55 - 276aa3621646bdf2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ElectroCart.ProductViewController.scrollViewDidEndDecelerating(__C.UIScrollView) -&gt; ()"
-                  moduleName = "ElectroCart"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mohdwasifraza/Desktop/ElectroCart/ElectroCart/Views/ProductViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "3007557B-1E04-4B96-8335-59FC55A50A55 - cbd005b833e779ed"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ElectroCart.ProductViewController.scrollViewDidScroll(__C.UIScrollView) -&gt; ()"
-                  moduleName = "ElectroCart"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mohdwasifraza/Desktop/ElectroCart/ElectroCart/Views/ProductViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "3007557B-1E04-4B96-8335-59FC55A50A55 - cbd005b833e77993"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ElectroCart.ProductViewController.scrollViewDidScroll(__C.UIScrollView) -&gt; ()"
-                  moduleName = "ElectroCart"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mohdwasifraza/Desktop/ElectroCart/ElectroCart/Views/ProductViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C6E2A91F-9774-488C-962D-CD06DF7B5D66"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ElectroCart/Views/ProductViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "currentPage"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -132,57 +69,10 @@
             filePath = "ElectroCart/Views/ProductViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "scrollViewDidScroll(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3C77D8F2-CF85-4E60-B0A1-55CC928E5399 - cbd005b833e77972"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ElectroCart.ProductViewController.scrollViewDidScroll(__C.UIScrollView) -&gt; ()"
-                  moduleName = "ElectroCart"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mohdwasifraza/Desktop/ElectroCart/ElectroCart/Views/ProductViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "3C77D8F2-CF85-4E60-B0A1-55CC928E5399 - cbd005b833e779ed"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ElectroCart.ProductViewController.scrollViewDidScroll(__C.UIScrollView) -&gt; ()"
-                  moduleName = "ElectroCart"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mohdwasifraza/Desktop/ElectroCart/ElectroCart/Views/ProductViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "3C77D8F2-CF85-4E60-B0A1-55CC928E5399 - cbd005b833e77993"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ElectroCart.ProductViewController.scrollViewDidScroll(__C.UIScrollView) -&gt; ()"
-                  moduleName = "ElectroCart"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mohdwasifraza/Desktop/ElectroCart/ElectroCart/Views/ProductViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -195,10 +85,90 @@
             filePath = "ElectroCart/Views/TableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "ShadowView"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "46E4A12A-4EBD-42B5-A726-869785DD87CE - e1f313eda8070146"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ElectroCart.ShadowView.bounds.getter : __C.CGRect"
+                  moduleName = "ElectroCart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohdwasifraza/Desktop/ElectroCart/ElectroCart/Views/TableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "46E4A12A-4EBD-42B5-A726-869785DD87CE - ee77f52da0bc38cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ElectroCart.ShadowView.bounds.setter : __C.CGRect"
+                  moduleName = "ElectroCart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohdwasifraza/Desktop/ElectroCart/ElectroCart/Views/TableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8931D1A-1975-4D57-B6A1-07C752F1D007"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ElectroCart/Views/ProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B8931D1A-1975-4D57-B6A1-07C752F1D007 - d5335a9e29e57f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ElectroCart.ProductViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "ElectroCart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohdwasifraza/Desktop/ElectroCart/ElectroCart/Views/ProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "2560">
+               </Location>
+               <Location
+                  uuid = "B8931D1A-1975-4D57-B6A1-07C752F1D007 - d5335a9e29e57f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ElectroCart.ProductViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "ElectroCart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohdwasifraza/Desktop/ElectroCart/ElectroCart/Views/ProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "1208">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -15,6 +15,8 @@ class TableViewCell: UITableViewCell {
     let priceLabel = UILabel()
     let imageCache = NSCache<NSString, UIImage>()
     let shadowLayer = ShadowView()
+    let starView = StarView()
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -25,15 +27,16 @@ class TableViewCell: UITableViewCell {
         addSubview(shadowLayer)
         shadowLayer.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.font = .boldSystemFont(ofSize: 20)
+        priceLabel.font = .boldSystemFont(ofSize: 16)
         
         self.addSubview(productImageView)
         self.addSubview(titleLabel)
-        self.addSubview(ratingLabel)
+        self.addSubview(starView)
         self.addSubview(priceLabel)
         
         productImageView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        ratingLabel.translatesAutoresizingMaskIntoConstraints = false
+        starView.translatesAutoresizingMaskIntoConstraints = false
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
         
         let bottomConstraint = productImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10)
@@ -51,12 +54,12 @@ class TableViewCell: UITableViewCell {
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: 10),
             
-            ratingLabel.leadingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: 10),
-            ratingLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
-            ratingLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            starView.leadingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: 10),
+            starView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            starView.trailingAnchor.constraint(lessThanOrEqualTo: titleLabel.trailingAnchor),
             
             priceLabel.leadingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: 10),
-            priceLabel.topAnchor.constraint(equalTo: ratingLabel.bottomAnchor),
+            priceLabel.topAnchor.constraint(equalTo: starView.bottomAnchor),
             priceLabel.bottomAnchor.constraint(equalTo: productImageView.bottomAnchor),
             priceLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
             
@@ -103,7 +106,6 @@ class TableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 class ShadowView: UIView {
